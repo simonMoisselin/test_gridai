@@ -10,7 +10,7 @@ if __name__ == "__main__":
     parser.add_argument("--steps", type=int, default=100)
     parser.add_argument("--bs", type=int, default=16)
     args = parser.parse_args()
-    os.system(
+    result = os.system(
         f"lightweight-gan --data /datastores/pokemon-jpg --num-train-steps {args.steps} --batch-size {args.bs}"
     )
-    print("Success!")
+    print(f"Success!: {result}")
